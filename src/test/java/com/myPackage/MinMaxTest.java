@@ -55,4 +55,25 @@ public class MinMaxTest {
         Assert.assertEquals(9.4,result,1e-15);
     }
 
+    @Test
+    public void greatest_string_at_first()
+    {
+        String result=minmax.checkgreateststring("Omkar","Fred","Deva");
+        Assert.assertEquals("Omkar",result);
+    }
+
+    @Test
+    public void greatest_string_at_second()
+    {
+        String result=minmax.checkgreateststring("Omkar","Tanmay","Sumit");
+        Assert.assertEquals("Tanmay",result);
+    }
+
+    @Test
+    public void greatest_string_at_third()
+    {
+        String result=minmax.checkgreateststring("Omkar","Adwait","Surendra");
+        Assert.assertEquals("Surendra",result);
+    }
+
 }

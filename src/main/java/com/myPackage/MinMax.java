@@ -3,31 +3,51 @@ import java.lang.Integer;
 
 public class MinMax {
 
-    public Integer checkgreatestint(Integer a ,Integer b,Integer c)
+    public Integer checkgreatestint(Integer num1 ,Integer num2,Integer num3)
     {
-       if( a.compareTo(b)>0 && a.compareTo(c)>0 )
+       if( num1.compareTo(num2)>0 && num1.compareTo(num3)>0 )
        {
-           return a;
+           return num1;
        }
-       else if (b.compareTo(c)>0)
+       else if (num2.compareTo(num3)>0)
        {
-           return b;
+           return num2;
        }
        else
-           return c;
+       {
+           return num3;
+       }
     }
 
-    public Double checkgreatestfloat(Double a ,Double b,Double c)
+    public Double checkgreatestfloat(Double float1 ,Double float2,Double float3)
     {
-        if( a.compareTo(b)>0 && a.compareTo(c)>0 )
+        if( float1.compareTo(float2)>0 && float1.compareTo(float3)>0 )
         {
-            return a;
+            return float1;
         }
-        else if (b.compareTo(c)>0)
+        else if (float2.compareTo(float3)>0)
         {
-            return b;
+            return float2;
         }
         else
-            return c;
+        {
+            return float3;
+        }
+    }
+
+    public String checkgreateststring(String string1 ,String string2,String string3)
+    {
+        if( string1.compareTo(string2)>0 && string1.compareTo(string3)>0 )
+        {
+            return string1;
+        }
+        else if (string2.compareTo(string3)>0)
+        {
+            return string2;
+        }
+        else
+        {
+            return string3;
+        }
     }
 }
