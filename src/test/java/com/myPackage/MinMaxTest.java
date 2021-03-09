@@ -16,63 +16,63 @@ public class MinMaxTest {
     @Test
     public void greatest_at_first()
     {
-        int result=minmax.checkgreatestint(15,10,5);
+        int result=minmax.maximum(15,10,5);
         Assert.assertEquals(15,result);
     }
 
     @Test
     public void greatest_at_second()
     {
-        int result=minmax.checkgreatestint(10,20,5);
+        int result=minmax.maximum(10,20,5);
         Assert.assertEquals(20,result);
     }
 
     @Test
     public void greatest_at_third()
     {
-        int result=minmax.checkgreatestint(5,10,15);
+        int result=minmax.maximum(5,10,15);
         Assert.assertEquals(15,result);
     }
 
     @Test
     public void greatest_float_at_first()
     {
-        double result=minmax.checkgreatestfloat(9.1,3.1,5.2);
+        double result=minmax.maximum(9.1,3.1,5.2);
         Assert.assertEquals(9.1,result,1e-15);
     }
 
     @Test
     public void greatest_float_at_second()
     {
-        double result=minmax.checkgreatestfloat(9.1,11.3,6.5);
+        double result=minmax.maximum(9.1,11.3,6.5);
         Assert.assertEquals(11.3,result,1e-15);
     }
 
     @Test
     public void greatest_float_at_third()
     {
-        double result=minmax.checkgreatestfloat(5.4,6.7,9.4);
+        double result=minmax.maximum(5.4,6.7,9.4);
         Assert.assertEquals(9.4,result,1e-15);
     }
 
     @Test
     public void greatest_string_at_first()
     {
-        String result=minmax.checkgreateststring("Omkar","Fred","Deva");
+        String result=minmax.maximum("Omkar","Fred","Deva");
         Assert.assertEquals("Omkar",result);
     }
 
     @Test
     public void greatest_string_at_second()
     {
-        String result=minmax.checkgreateststring("Omkar","Tanmay","Sumit");
+        String result=minmax.maximum("Omkar","Tanmay","Sumit");
         Assert.assertEquals("Tanmay",result);
     }
 
     @Test
     public void greatest_string_at_third()
     {
-        String result=minmax.checkgreateststring("Omkar","Adwait","Surendra");
+        String result=minmax.maximum("Omkar","Adwait","Surendra");
         Assert.assertEquals("Surendra",result);
     }
 
