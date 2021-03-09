@@ -5,74 +5,67 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MinMaxTest {
-    MinMax minmax;
-
-    @Before
-    public void setup() throws Exception
-    {
-        minmax=new MinMax();
-    }
 
     @Test
     public void greatest_at_first()
     {
-        int result=minmax.maximum(15,10,5);
+        int result= (int) new MinMax(15,10,5).maximum();
         Assert.assertEquals(15,result);
     }
 
     @Test
     public void greatest_at_second()
     {
-        int result=minmax.maximum(10,20,5);
+        int result=(int) new MinMax(5,20,15).maximum();
         Assert.assertEquals(20,result);
     }
 
     @Test
     public void greatest_at_third()
     {
-        int result=minmax.maximum(5,10,15);
+        int result=(int) new MinMax(5,10,15).maximum();
         Assert.assertEquals(15,result);
     }
 
     @Test
     public void greatest_float_at_first()
     {
-        double result=minmax.maximum(9.1,3.1,5.2);
+        double result=(double) new MinMax(9.1,3.1,5.2).maximum();
         Assert.assertEquals(9.1,result,1e-15);
     }
 
     @Test
     public void greatest_float_at_second()
     {
-        double result=minmax.maximum(9.1,11.3,6.5);
-        Assert.assertEquals(11.3,result,1e-15);
+        double result=(double) new MinMax(3.1,9.1,5.2).maximum();
+        Assert.assertEquals(9.1,result,1e-15);
     }
 
     @Test
     public void greatest_float_at_third()
     {
-        double result=minmax.maximum(5.4,6.7,9.4);
-        Assert.assertEquals(9.4,result,1e-15);
+        double result=(double) new MinMax(2.1,3.1,8.2).maximum();
+        Assert.assertEquals(8.2,result,1e-15);
     }
 
     @Test
     public void greatest_string_at_first()
     {
-        String result=minmax.maximum("Omkar","Fred","Deva");
+        String result=(String) new MinMax("Omkar","Fred","Deva").maximum();
         Assert.assertEquals("Omkar",result);
     }
 
     @Test
     public void greatest_string_at_second()
     {
-        String result=minmax.maximum("Omkar","Tanmay","Sumit");
+        String result=(String) new MinMax("Omkar","Tanmay","Sumit").maximum();
         Assert.assertEquals("Tanmay",result);
     }
 
     @Test
     public void greatest_string_at_third()
     {
-        String result=minmax.maximum("Omkar","Adwait","Surendra");
+        String result=(String) new MinMax("Omkar","Adwait","Surendra").maximum();
         Assert.assertEquals("Surendra",result);
     }
 
